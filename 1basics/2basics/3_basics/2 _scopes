@@ -1,0 +1,48 @@
+//var c=300
+let a=300
+if (true){
+     let a=10               
+     const b=20
+     var c=30
+    // console.log("inner:",a)
+}
+
+//console.log(a)
+//console.log(b)
+//console.log(c)
+
+function one(){                        //1
+    const username="alex"
+    function two(){                   //2
+        const website="utube"
+       // console.log(username)
+    }
+   //console.log(website)      //function scope due to which it will give website not defined
+    two()
+
+}
+//one()
+if(true){
+    const username="alex"
+    if(username=="alex")
+    {
+        const website=" utube "
+       // console.log(username+website)
+    }
+   // console.log(website)
+}
+//console.log(username)
+
+
+//********************************************interesting************************ */
+
+console.log(addone(5))             //can be done
+function addone(num){
+    return num+1
+
+}
+
+console.log(addtwo(5))   //error if written before initialisation
+const addtwo=function(num){
+    return num+2
+}
